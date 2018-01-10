@@ -1,0 +1,85 @@
+body {
+    background-color: #002d56;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+	color:#002d56;
+}
+
+input[type=button] {
+    background-color: white;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	color:#002d56;
+	font-weight:bold;
+	
+}
+
+input[type=button]:hover {
+    background-color: #A9A9A9;
+	font-weight:bold;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #002d56;
+    padding: 20px;
+}
+label {
+color: white; /* makes the text-black */
+}
+td, th {
+    color:white;
+    font-weight:bold;
+}
+
+body {
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+}
+
+#error1 {
+  display: none;
+  color: #555;
+  border-radius: 5px;
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+  font-size: .8em;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 5px 5px 5px;
+  background: #ffecec url('../img/cross.png') no-repeat 10px 50%;
+  border: 2px solid #f5aca6;
+  width:20%;
+}
+#error2 {
+  display: none;
+  color: #555;
+  border-radius: 5px;
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+  font-size: .8em;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 5px 5px 5px;
+  background: #ffecec url('../img/cross.png') no-repeat 10px 50%;
+  border: 2px solid #f5aca6;
+  width:20%;
+}
+#error3 {
+  display: none;
+  color: #555;
+  border-radius: 5px;
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+  font-size: .8em;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 5px 5px 5px;
+  background: #ffecec url('../img/cross.png') no-repeat 10px 50%;
+  border: 2px solid #f5aca6;
+  width:20%;
+}

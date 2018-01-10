@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>VizOn</title>
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/logicalsqlstyle.css">
+<script type="text/javascript" src="./js/cxf-utils.js"></script>
+<script type="text/javascript" src="./js/ConditionService.js"></script>
+<script type="text/javascript" src="./js/IBotService.js"></script>
+<script type="text/javascript" src="./js/JobManagementService.js"></script>
+<script type="text/javascript" src="./js/MetadataService.js"></script>
+<script type="text/javascript" src="./js/ReplicationService.js"></script>
+<script type="text/javascript" src="./js/ReportEditingService.js"></script>
+<script type="text/javascript" src="./js/SAWSessionService.js"></script>
+<script type="text/javascript" src="./js/SecurityService.js"></script>
+<script type="text/javascript" src="./js/WebCatalogService.js"></script>
+<script type="text/javascript" src="./js/XmlViewService.js"></script>
+<script type="text/javascript" src="./js/connection.js"></script>
+
+
+<script type="text/javascript">
+	/*Declare the variables which are globaly required in all services.*/
+
+	var sessionId;
+	var hostString = '';
+	var issessionIdCreated;
+	
+	// 'isHostStringBuild' this global variable is for checking whether the 'hostString' is present or not.
+	 //This variable will be useful at 'buildURL()' function.
+	var isHostStringBuild = false;
+	// 'urlType' checks whether url is 'http:' or 'https:'.
+	//Which is used in 'buildURL()'.
+	var urlType ;
+	//'genericURL' is the build URL.
+	//Which is independent of serviceName.
+	//This is for transferring URL from interactive phase to getDataPhase.
+	var genericURL;
+	var faultCode;
+	var faultString;
+	var subjectAreas;
+	var selectedSubjectArea;
+	var tables;
+	var selectedTables = [];
+	var columns;
+	var dataRowset;
+	var interactionPhaseFlag = false;
+	var selectedColumns = [];
+	var numberOfcolumnsSelected;
+	var currentTable;
+</script>
+
+<script type="text/javascript">
+	function logon(url, username, password) {
+		//set the url to 'hostString' global variable.
+		hostString = url;
+		connect(username, password);
+
+		//check whether sessionId is created or not.
+		if(issessionIdCreated == true)
+		{
+			allSAsDropDown();
+		}
+		else{
+			document.write('<br>Some error occured while login<br>');
+			document.write('<br> Error Message : '+faultString+'<br>');
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="login-page" style="width: 557px; display: block;"
+		id="loginDiv">
+		<div>
+			<img src="img/logo.png">
+		</div>
+		<div class="form"
+			style="border-radius: 15px; position: relative; z-index: 1; background: #f6f7f7; max-width: 360px; margin: 0 auto 100px; padding: 45px; text-align: center; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); width: 413px">
+			<form class="login-form">
+				<input type="text" placeholder="OBIEE Url(Eg:http://localhost:5502)"
+					id="url" /><br> <input type="text" placeholder="User Name"
+					id="username" /><br> <input type="password"
+					placeholder="Password" id="password" /><br> <input
+					type="button" value="logon"
+					onclick="logon((document.getElementById('url').value),(document.getElementById('username').value),(document.getElementById('password').value))" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

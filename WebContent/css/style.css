@@ -1,0 +1,40 @@
+body {
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+}
+
+#error1 {
+  display: none;
+  color: #555;
+  border-radius: 5px;
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+  font-size: .8em;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 5px 5px 5px;
+  background: #ffecec url('../img/cross.png') no-repeat 10px 50%;
+  border: 2px solid #f5aca6;
+  width:100%;
+}
+#error2 {
+  display: none;
+  color: #555;
+  border-radius: 5px;
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+  font-size: .8em;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 5px 5px 5px;
+  background: #ffecec url('../img/cross.png') no-repeat 10px 50%;
+  border: 2px solid #f5aca6;
+  width:100%;
+}
+#error3 {
+  display: none;
+  color: #555;
+  border-radius: 5px;
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+  font-size: .8em;
+  padding: 5px 5px 5px 30px;
+  margin: 5px 5px 5px 5px;
+  background: #ffecec url('../img/cross.png') no-repeat 10px 50%;
+  border: 2px solid #f5aca6;
+  width:100%;
+}
