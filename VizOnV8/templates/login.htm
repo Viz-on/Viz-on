@@ -1,0 +1,24 @@
+<div class="col-md-12" ng-controller="loginController">
+    <h3>Login</h3>
+    
+    <form class="form">
+      <div class="col-md-4">
+          <div class="form-group">
+              <input type="text" class="form-control" ng-model="url" placeholder="url" required=""/>
+            </div> 
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model="username" placeholder="username" required=""/>
+        </div> 
+
+        <div class="form-group">
+          <input type="password" class="form-control" ng-model="password" placeholder="password" required=""/>
+        </div>
+
+        <div class="form-group">
+          <button type="submit"  ng-click="getAccess()"  class="btn btn-success">Login</button>
+          <span class="text-danger" ng-model="error">{{ error }}</span>
+        </div>
+        <!-- <a href="#/analysis" class="btn btn-block">Secret Page</a> -->
+      </div>
+    </form>
+  </div>

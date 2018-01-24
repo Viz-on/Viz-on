@@ -1,0 +1,42 @@
+<div ng-controller="analysisController">
+        <div layout="column" layout-fill>
+        <div layout="row" layout-margin flex>
+                        <div class="one" flex="20"> 
+        <div> <!-- Main Div -->
+            <div style="float:left; width:25%;" >
+                <div>
+                <select  class="form-control" ng- ng-model="SelectedSubjectAreas" ng-change="SelectedSA()">
+                     <option  ng-model="SubjectAreas" 
+                     ng-repeat="s in SubjectAreas">{{s}}</option>
+                </select>
+                </div>
+                <div>
+                <select  class="form-control"  ng-model="selTables" ng-change="selectedTables()">
+                        <option  ng-model="tableName" 
+                        ng-repeat="t in tableName track by $index">{{t}}</option>
+                </select>
+                </div>
+        
+              <div ng-repeat="item in colName track by $index">
+                 <label>
+                        <input type="checkbox"  ng-checked="exists(item,SelectedSubjectAreas,selTables, selectedCols)" ng-click="toggle(item,SelectedSubjectAreas,selTables, selectedCols)">
+                        {{ item }}
+                 </label>
+            </div>
+            <div flex="100">
+                    <h2 class="md-title">Selected Items</h2>
+                    <code style="display: block; padding: 8px;">{{selectedCols | json}}</code>
+                  </div>
+            </div>
+        </div>
+                        </div>
+                        
+                        <div class="two" flex="80">
+
+                        <h4>Welcome {{currentUser}}!</h4>
+                        <button ng-click="logOff()">LogOff</button>
+                        <button ng-click="getColumnsData()">Results</button></div>
+                        <h5>{{dataSet}}</h5>
+                </div>
+        </div>
+</div>
