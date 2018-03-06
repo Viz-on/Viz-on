@@ -68,6 +68,25 @@
 		}
 	}
 </script>
+<script type="text/javascript">
+document.oncontextmenu=RightMouseDown;
+document.onmousedown = mouseDown; 
+function mouseDown(e) {
+    if (e.which==3) {//righClick
+        //have to code to show custom menu list
+    }
+}
+function RightMouseDown() { return false; }
+</script>
+<script>
+ document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 ||     e.keyCode === 117 || e.keycode === 17 || e.keycode === 85)) 
+    {
+    	//ctrl+u Alt+c, Alt+v will also be disabled sadly.
+    }
+    return false;
+};
+</script>
 </head>
 <body>
 	<div class="login-page" style="width: 557px; display: block;"
